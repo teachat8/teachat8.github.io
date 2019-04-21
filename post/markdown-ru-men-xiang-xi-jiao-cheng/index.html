@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://teachat8.github.io/favicon.ico?v=1555833841233">
+<link rel="shortcut icon" href="https://teachat8.github.io/favicon.ico?v=1555854323435">
 <link rel="stylesheet" href="https://teachat8.github.io/styles/main.css">
 
 
@@ -35,7 +35,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://teachat8.github.io">
-        <img src="https://teachat8.github.io/images/avatar.png?v=1555833841233" class="site-logo">
+        <img src="https://teachat8.github.io/images/avatar.png?v=1555854323435" class="site-logo">
         <h1 class="site-title">Teachat&#39;s Blog | Share with you IT technology, to achieve progress together.</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -123,6 +123,7 @@
 </ul>
 <p>Markdown 在线编辑器：</p>
 <ul>
+<li><a href="https://dillinger.io/">dillinger</a></li>
 <li><a href="https://maxiang.io">马克飞象</a></li>
 <li><a href="https://www.zybuluo.com/mdeditor">作业部落</a></li>
 </ul>
@@ -165,10 +166,9 @@
 </code></pre>
 <h2 id="在表格单元格里换行">在表格单元格里换行</h2>
 <p>借助于 HTML 里的 <code>&lt;br /&gt;</code>实现。</p>
-<pre><code>| Header1 | Header2                          |
-|---------|----------------------------------|
+<pre><code>| Header1  | Header2                                |
+|----------|----------------------------------|
 | item 1  | 1. one&lt;br /&gt;2. two&lt;br /&gt;3. three |
-
 </code></pre>
 <table>
 <thead>
@@ -181,6 +181,33 @@
 <tr>
 <td>item 1</td>
 <td>1. one<br />2. two<br />3. three</td>
+</tr>
+</tbody>
+</table>
+<h2 id="在表格单元格里左对齐居中对齐右对齐">在表格单元格里左对齐居中对齐右对齐</h2>
+<pre><code>| Header1Header1Header1 | Header2Header2Header2  |Header3Header3Header3|
+|:------------|:-----------:|--------------:|
+| item 1    |111                 |222                     |
+| item 2    |333                   |444                    |
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Header1Header1Header1</th>
+<th style="text-align:center">Header2Header2Header2</th>
+<th style="text-align:right">Header3Header3Header3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">item 1</td>
+<td style="text-align:center">111</td>
+<td style="text-align:right">222</td>
+</tr>
+<tr>
+<td style="text-align:left">item 2</td>
+<td style="text-align:center">333</td>
+<td style="text-align:right">444</td>
 </tr>
 </tbody>
 </table>
