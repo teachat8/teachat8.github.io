@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Markdown 入门详细教程 | Teachat&#39;s Blog | Share with you IT technology, to achieve progress together.</title>
+<meta name="description" content="记录博主学习和成长的一个博客,关注于Web前后端的学习研究.&#34;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://teachat8.github.io/favicon.ico?v=1555832227077">
+<link rel="stylesheet" href="https://teachat8.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://teachat8.github.io">
+        <img src="https://teachat8.github.io/images/avatar.png?v=1555832227077" class="site-logo">
+        <h1 class="site-title">Teachat&#39;s Blog | Share with you IT technology, to achieve progress together.</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      记录博主学习和成长的一个博客,关注于Web前后端的学习研究."
+    </div>
+    <div class="site-footer">
+      
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Markdown 入门详细教程</h2>
+            <div class="post-date">2019-04-21</div>
+            
+              <div class="feature-container" style="background-image: url('https://i.loli.net/2019/04/21/5cbc1d85484de.jpg')">
+              </div>
+            
+            <div class="post-content">
+              <h1 id="markdown-简介">Markdown 简介</h1>
+<ul>
+<li>Markdown 中文官网：http://www.markdown.cn</li>
+<li>【简明版】有道云笔记Markdown指南：http://note.youdao.com/iyoudao/?p=2411</li>
+<li>【进阶版】有道云笔记Markdown指南：http://note.youdao.com/iyoudao/?p=2445</li>
+</ul>
+<p>Markdown 是一种简单、易读易写的「标记语言」，用来写博客、做笔记非常方便，通常为程序员群体所用。</p>
+<p>Markdown 的语法十分简单，常用的标记符号不超过十个，用于日常写作记录绰绰有余，不到半小时就能完全掌握。用户可以使用一些标记符号以最小的输入代价生成极富表现力的文档（譬如您正在阅读的这份文档就是通过 Markdown 书写的）。</p>
+<h1 id="安利一波-markdown-工具">安利一波 Markdown 工具</h1>
+<blockquote>
+<p>注意：不同平台的 Markdown 语法会有些许差别。</p>
+</blockquote>
+<p>Markdown 编辑器（支持实时同步预览）：</p>
+<ul>
+<li>VSCode</li>
+<li>Sublime + Markdown 插件（MarkdownPreview）</li>
+</ul>
+<p>Markdown 在线编辑器：</p>
+<ul>
+<li>马克飞象：https://maxiang.io</li>
+<li>作业部落：https://www.zybuluo.com/mdeditor</li>
+</ul>
+<h1 id="markdown-基本语法">Markdown 基本语法</h1>
+<p>Markdown 的标记语法非常之多，并且不同平台的 Markdown 语法会有些许差别，但是常用的标记符号不超过十个，且平台间基本通用。</p>
+<p>常用标记：标题、粗体、斜体、删除线、下划线、高亮、引用、分割线、链接与图片。</p>
+<p>不常用标记：列表、待办事项、表格、代码高亮、流程图、序列图、甘特图、数学公式。</p>
+<h2 id="标题">标题</h2>
+<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-0-%E6%A0%87%E9%A2%98.png" alt=""></p>
+<h2 id="粗体和斜体">粗体和斜体</h2>
+<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-3-%E7%B2%97%E4%BD%93%E6%96%9C%E4%BD%93.png" alt=""></p>
+<h2 id="引用">引用</h2>
+<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-2%E5%BC%95%E7%94%A8.png" alt=""></p>
+<h2 id="链接与图片">链接与图片</h2>
+<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-4%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%9B%BE%E7%89%87.png" alt=""></p>
+<h2 id="分割线">分割线</h2>
+<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-5-%E5%88%86%E5%89%B2%E7%BA%BF.png" alt=""></p>
+<h2 id="列表">列表</h2>
+<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-1-%E5%88%97%E8%A1%A8.png" alt=""></p>
+<h2 id="待办事项">待办事项</h2>
+<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/1-2%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9.png" alt=""></p>
+<h2 id="表格">表格</h2>
+<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/1-3%E8%A1%A8%E6%A0%BC.png" alt=""></p>
+<h2 id="代码高亮">代码高亮</h2>
+<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/1-1%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE.png" alt=""></p>
+<h2 id="流程图">流程图</h2>
+<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt=""></p>
+<h2 id="甘特图">甘特图</h2>
+<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/%E7%94%981.png" alt=""></p>
+<h1 id="markdown-使用技巧">Markdown 使用技巧</h1>
+<h2 id="表情">表情</h2>
+<p>可以在 HTML、Markdown 中使用下面的表情，微软自带的输入法可以输入这些表情：</p>
+<p>📦 🚀 🐠 ✂️ 🔥 🚨 ✏️ 🛠 💅 👌 ✨ 💯 ⚛️ 📄</p>
+<h2 id="目录">目录</h2>
+<p>Markdown 目录，使用 [TOC]</p>
+<h2 id="控制图片大小和位置">控制图片大小和位置</h2>
+<pre><code>	&lt;div align=&quot;center&quot;&gt;
+		&lt;img width=&quot;65&quot; height=&quot;75&quot; src=&quot;&quot;/&gt;
+	&lt;/div&gt;
+</code></pre>
+<h2 id="在表格单元格里换行">在表格单元格里换行</h2>
+<p>借助于 HTML 里的 <code>&lt;br /&gt;</code>实现。</p>
+<pre><code>| Header1 | Header2                          |
+|---------|----------------------------------|
+| item 1  | 1. one&lt;br /&gt;2. two&lt;br /&gt;3. three |
+
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Header1</th>
+<th>Header2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>item 1</td>
+<td>1. one<br />2. two<br />3. three</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://teachat8.github.io/tag/OjU8kekth" class="tag">
+                    Markdown
+                  </a>
+                
+              </div>
+            
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '769b3c0b43e7e76baa09',
+        clientSecret: '8b0dee161c67ed4e6b42bce3d60ecc53cbba953f',
+        repo: 'teachat8.github.io',
+        owner: 'teachat8',
+        admin: ['teachat8'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
