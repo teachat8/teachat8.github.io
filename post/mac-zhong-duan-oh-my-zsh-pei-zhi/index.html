@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
-<title>Markdown 入门详细教程 | Teachat&#39;s Blog | Share with you IT technology, to achieve progress together.</title>
+<title>Mac终端oh-my-zsh配置 | Teachat&#39;s Blog | Share with you IT technology, to achieve progress together.</title>
 <link rel="shortcut icon" href="https://teachat8.github.io/favicon.ico?v=1556174441821">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://teachat8.github.io/styles/main.css" type='text/css' media='all'>
@@ -117,135 +117,74 @@
     <div id="loop-container" class="loop-container">
       <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
         
-          <div class='featured-image lazy lazy-bg-image' data-background="https://i.loli.net/2019/04/21/5cbc1d85484de.jpg">
+          <div class='featured-image lazy lazy-bg-image' data-background="https://i.loli.net/2019/04/25/5cc155d3c2398.jpeg">
           </div>
         
 
         <div class="entry-meta">
-          <span class="date">· 2019-04-21 ·</span> <span> / </span>
+          <span class="date">· 2019-04-25 ·</span> <span> / </span>
           <span class="author">
             <a href="https://teachat8.github.io" title="" rel="author"> </a>
           </span>
           
             <span class="category">
                     <span> / </span>
-                    <a href="https://teachat8.github.io/tag/OjU8kekth">Markdown</a>
+                    <a href="https://teachat8.github.io/tag/pm0FyUMhZ">Mac</a>
                 </span>
           
         </div>
         <div class='entry-header'>
-          <h1 class='entry-title'>Markdown 入门详细教程</h1>
+          <h1 class='entry-title'>Mac终端oh-my-zsh配置</h1>
         </div>
         <div class="entry-container">
           <div class="entry-content">
             <article>
-              <h1 id="markdown-简介">Markdown 简介</h1>
+              <p>我的 Mac 终端配置（Mac OSX + iTerm2 + Zsh + Oh-My-Zsh）</p>
+<p>最终效果：</p>
+<p><img src="https://i.loli.net/2019/04/25/5cc153c170970.png" alt="效果"></p>
+<p>完成配置后的终端具备功能：</p>
+<ol>
+<li>语法高亮</li>
+<li>命令行tab补全</li>
+<li>自动提示符</li>
+<li>显示Git仓库状态等功能</li>
+<li>⌘+r 快速清空代码面板，跟终端输入clear一样的效果</li>
+</ol>
+<h2 id="具体配置步骤">具体配置步骤</h2>
+<h2 id="1-下载iterm2">1. 下载<a href="https://www.iterm2.com/">iTerm2</a></h2>
+<h2 id="2-配置zsh">2. 配置zsh</h2>
+<p>zsh 一般 Mac 已经自带了，无需额外安装。</p>
+<p>查看 zsh 是否安装</p>
+<p><img src="https://i.loli.net/2019/04/25/5cc150d77b5d6.png" alt="查看 zsh 是否安装"></p>
+<p>切换为 zsh</p>
+<p><img src="https://i.loli.net/2019/04/25/5cc1514805deb.png" alt="切换为 zsh"></p>
+<p>重启终端即可使用 zsh</p>
+<h2 id="2-安装oh-my-zsh">2. 安装oh-my-zsh</h2>
+<p><code>sh -c&quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</code></p>
+<h2 id="3-oh-my-zsh使用默认的主题robbyrussell无需修改">3. oh-my-zsh使用默认的主题：robbyrussell，无需修改。</h2>
+<h2 id="4-自动提示与命令补全">4. 自动提示与命令补全</h2>
 <ul>
-<li><a href="http://www.markdown.cn">Markdown 中文官网</a></li>
-<li><a href="http://note.youdao.com/iyoudao/?p=2411">【简明版】有道云笔记Markdown指南</a></li>
-<li><a href="http://note.youdao.com/iyoudao/?p=2445">【进阶版】有道云笔记Markdown指南</a></li>
-</ul>
-<p>Markdown 是一种简单、易读易写的「标记语言」，用来写博客、做笔记非常方便，通常为程序员群体所用。</p>
-<p>Markdown 的语法十分简单，常用的标记符号不超过十个，用于日常写作记录绰绰有余，不到半小时就能完全掌握。用户可以使用一些标记符号以最小的输入代价生成极富表现力的文档（譬如您正在阅读的这份文档就是通过 Markdown 书写的）。</p>
-<h1 id="安利一波-markdown-工具">安利一波 Markdown 工具</h1>
-<blockquote>
-<p>注意：不同平台的 Markdown 语法会有些许差别。</p>
-</blockquote>
-<p>Markdown 编辑器（支持实时同步预览）：</p>
+<li>克隆仓库到本地 ~/.oh-my-zsh/custom/plugins 路径下
+<code>git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions</code></li>
+<li>用 vim 编辑 .zshrc 文件，找到插件设置命令，默认是<code>plugins=(git)</code>，修改为<code>plugins=(zsh-autosuggestions git)</code></li>
+<li>当你重新打开终端时可能看不到变化，可能你的字体颜色太淡了，我们把其改亮一些：
 <ul>
-<li>VSCode</li>
-<li>Sublime + Markdown 插件（MarkdownPreview）</li>
+<li><code>cd ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions</code></li>
+<li>用 vim 编辑 zsh-autosuggestions.zsh 文件，修改<code>ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'</code></li>
 </ul>
-<p>Markdown 在线编辑器：</p>
+</li>
+</ul>
+<h2 id="5-语法高亮效果">5. 语法高亮效果</h2>
 <ul>
-<li><a href="https://dillinger.io/">dillinger</a></li>
-<li><a href="https://maxiang.io">马克飞象</a></li>
-<li><a href="https://www.zybuluo.com/mdeditor">作业部落</a></li>
+<li>使用homebrew包管理工具安装 zsh-syntax-highlighting 插件
+<code>brew install zsh-syntax-highlighting</code></li>
+<li>如果电脑上还没有安装homebrew，请先安装homebrew
+<code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></li>
+<li>配置.zshrc文件，追加一行内容
+<code>source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh</code></li>
+<li>加载.zshrc配置
+<code>source ~/.zshrc</code></li>
 </ul>
-<h1 id="markdown-基本语法">Markdown 基本语法</h1>
-<p>Markdown 的标记语法非常之多，并且不同平台的 Markdown 语法会有些许差别，但是常用的标记符号不超过十个，且平台间基本通用。</p>
-<p>常用标记：标题、粗体、斜体、删除线、下划线、高亮、引用、分割线、链接与图片。</p>
-<p>不常用标记：列表、待办事项、表格、代码高亮、流程图、序列图、甘特图、数学公式。</p>
-<h2 id="标题">标题</h2>
-<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-0-%E6%A0%87%E9%A2%98.png" alt=""></p>
-<h2 id="粗体和斜体">粗体和斜体</h2>
-<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-3-%E7%B2%97%E4%BD%93%E6%96%9C%E4%BD%93.png" alt=""></p>
-<h2 id="引用">引用</h2>
-<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-2%E5%BC%95%E7%94%A8.png" alt=""></p>
-<h2 id="链接与图片">链接与图片</h2>
-<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-4%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%9B%BE%E7%89%87.png" alt=""></p>
-<h2 id="分割线">分割线</h2>
-<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-5-%E5%88%86%E5%89%B2%E7%BA%BF.png" alt=""></p>
-<h2 id="列表">列表</h2>
-<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-1-%E5%88%97%E8%A1%A8.png" alt=""></p>
-<h2 id="待办事项">待办事项</h2>
-<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/1-2%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9.png" alt=""></p>
-<h2 id="表格">表格</h2>
-<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/1-3%E8%A1%A8%E6%A0%BC.png" alt=""></p>
-<h2 id="代码高亮">代码高亮</h2>
-<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/1-1%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE.png" alt=""></p>
-<h2 id="流程图">流程图</h2>
-<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt=""></p>
-<h2 id="甘特图">甘特图</h2>
-<p><img src="http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/%E7%94%981.png" alt=""></p>
-<h1 id="markdown-使用技巧">Markdown 使用技巧</h1>
-<h2 id="表情">表情</h2>
-<p>可以在 HTML、Markdown 中使用下面的表情，微软自带的输入法可以输入这些表情：</p>
-<p>📦 🚀 🐠 ✂️ 🔥 🚨 ✏️ 🛠 💅 👌 ✨ 💯 ⚛️ 📄</p>
-<h2 id="目录">目录</h2>
-<p>Markdown 目录，使用 [TOC]</p>
-<h2 id="控制图片大小和位置">控制图片大小和位置</h2>
-<pre><code>	&lt;div align=&quot;center&quot;&gt;
-		&lt;img width=&quot;65&quot; height=&quot;75&quot; src=&quot;&quot;/&gt;
-	&lt;/div&gt;
-</code></pre>
-<h2 id="在表格单元格里换行">在表格单元格里换行</h2>
-<p>借助于 HTML 里的 <code>&lt;br /&gt;</code>实现。</p>
-<pre><code>| Header1  | Header2                                |
-|----------|----------------------------------|
-| item 1  | 1. one&lt;br /&gt;2. two&lt;br /&gt;3. three |
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>Header1</th>
-<th>Header2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>item 1</td>
-<td>1. one<br />2. two<br />3. three</td>
-</tr>
-</tbody>
-</table>
-<h2 id="在表格单元格里左对齐居中对齐右对齐">在表格单元格里左对齐居中对齐右对齐</h2>
-<pre><code>| Header1Header1Header1 | Header2Header2Header2  |Header3Header3Header3|
-|:------------|:-----------:|--------------:|
-| item 1    |111                 |222                     |
-| item 2    |333                   |444                    |
-</code></pre>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Header1Header1Header1</th>
-<th style="text-align:center">Header2Header2Header2</th>
-<th style="text-align:right">Header3Header3Header3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">item 1</td>
-<td style="text-align:center">111</td>
-<td style="text-align:right">222</td>
-</tr>
-<tr>
-<td style="text-align:left">item 2</td>
-<td style="text-align:center">333</td>
-<td style="text-align:right">444</td>
-</tr>
-</tbody>
-</table>
 
             </article>
           </div>
@@ -302,6 +241,13 @@
             </div>
           </div>
         </div>
+          
+            <nav class="navigation pagination" role="navigation">
+              <h2 class="screen-reader-text">Posts navigation</h2>
+              <div class="nav-links">
+                <a class="next page-numbers" href="https://teachat8.github.io/post/xiang-ying-shi-ye-mian-bu-ju">下一篇->响应式页面布局</a>
+              </div>
+            </nav>
           
       </div>
       <section id="comments" class="comments">
